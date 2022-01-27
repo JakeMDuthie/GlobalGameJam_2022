@@ -164,4 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffceedbd063de8144a90981af7d9a02e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelOne: TestScene
+  LevelOne: TestSceneCollectables
+  LevelList:
+  - m_Handle: 1
+  - m_Handle: 2

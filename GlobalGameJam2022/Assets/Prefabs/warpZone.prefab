@@ -69,7 +69,7 @@ GameObject:
   - component: {fileID: 5009097602173130509}
   - component: {fileID: 5009097602173130510}
   - component: {fileID: 5009097602173130511}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: warpZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
