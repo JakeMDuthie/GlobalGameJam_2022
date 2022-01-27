@@ -10,6 +10,7 @@
           <e p="Character.cs" t="Include" />
           <e p="CharacterController.cs" t="Include" />
           <e p="Collectable.cs" t="Include" />
+          <e p="DialogueHUDInfo.cs" t="Include" />
           <e p="GameController.cs" t="Include" />
           <e p="LevelController.cs" t="Include" />
           <e p="LevelHUD.cs" t="Include" />
