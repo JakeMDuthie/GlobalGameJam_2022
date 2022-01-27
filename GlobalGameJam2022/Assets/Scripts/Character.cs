@@ -10,12 +10,16 @@ public class Character : MonoBehaviour
     public float GravityDirection = 1.0f;
     public float JumpCooldownMax = 0.1f;
     public LayerMask JumpLayerMask;
+    public WorldEnum world;
     
     private Rigidbody2D _rigidbody2D;
     private Collider2D _collider2D;
     private bool _canJump = false;
     private bool _warpable = false;
     private float _jumpCooldown = 0.0f;
+
+    public int collectables = 0;
+
 
     private const string kWarpTag = "WarpZone";
 
@@ -71,7 +75,7 @@ public class Character : MonoBehaviour
         
         _rigidbody2D.AddForce(new Vector2(0.0f, JumpForce), ForceMode2D.Impulse);
     }
-
+    
     private bool IsGrounded()
     {
         float tolerance = 0.1f;
@@ -89,6 +93,11 @@ public class Character : MonoBehaviour
         Debug.Log(raycast.collider);
         
         return raycast.collider != null;
+    }
+    
+    public void getCollectable()
+    {
+        this.collectables++;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
