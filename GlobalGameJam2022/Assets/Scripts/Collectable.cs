@@ -26,15 +26,23 @@ public class Collectable : MonoBehaviour
         {
             if (character.world == this.world)
             {
-                samePick(character);
+                SamWorldePick(character);
+            } else
+            {
+                OtherWorldPick(character);
             }
         }
     }
 
 
-    void samePick(Character character)
+    void SamWorldePick(Character character)
     {
         character.getCollectable();
+        Destroy(this.gameObject);
+    }
+
+    void OtherWorldPick(Character character)
+    {
         Destroy(this.gameObject);
     }
 }
