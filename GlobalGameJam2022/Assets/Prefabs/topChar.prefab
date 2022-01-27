@@ -134,3 +134,7 @@ MonoBehaviour:
   SpeedModifier: 8
   JumpModifier: 5
   GravityDirection: 1
+  JumpCooldownMax: 0.1
+  JumpLayerMask:
+    serializedVersion: 2
+    m_Bits: 256

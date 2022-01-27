@@ -239,7 +239,7 @@ GameObject:
   - component: {fileID: 23760511}
   - component: {fileID: 23760510}
   - component: {fileID: 23760509}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -345,7 +345,7 @@ GameObject:
   - component: {fileID: 79188471}
   - component: {fileID: 79188470}
   - component: {fileID: 79188469}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ceiling
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -555,7 +555,7 @@ GameObject:
   - component: {fileID: 185930623}
   - component: {fileID: 185930622}
   - component: {fileID: 185930621}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -716,6 +716,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: warpZone (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5009097602173130505, guid: 1e5f08a793cc25248977871f3d25c700,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e5f08a793cc25248977871f3d25c700, type: 3}
 --- !u!4 &187035021 stripped
@@ -736,7 +741,7 @@ GameObject:
   - component: {fileID: 235927575}
   - component: {fileID: 235927574}
   - component: {fileID: 235927573}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -971,7 +976,7 @@ GameObject:
   - component: {fileID: 497425199}
   - component: {fileID: 497425198}
   - component: {fileID: 497425197}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1077,7 +1082,7 @@ GameObject:
   - component: {fileID: 501194634}
   - component: {fileID: 501194633}
   - component: {fileID: 501194632}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1263,7 +1268,7 @@ GameObject:
   - component: {fileID: 874648233}
   - component: {fileID: 874648232}
   - component: {fileID: 874648231}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1423,6 +1428,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: warpZone (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5009097602173130505, guid: 1e5f08a793cc25248977871f3d25c700,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e5f08a793cc25248977871f3d25c700, type: 3}
@@ -1640,7 +1650,7 @@ GameObject:
   - component: {fileID: 1475680907}
   - component: {fileID: 1475680906}
   - component: {fileID: 1475680905}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1804,7 +1814,7 @@ GameObject:
   - component: {fileID: 2080959447}
   - component: {fileID: 2080959446}
   - component: {fileID: 2080959445}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: midDivider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1970,6 +1980,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: warpZone
+      objectReference: {fileID: 0}
+    - target: {fileID: 5009097602173130505, guid: 1e5f08a793cc25248977871f3d25c700,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e5f08a793cc25248977871f3d25c700, type: 3}
