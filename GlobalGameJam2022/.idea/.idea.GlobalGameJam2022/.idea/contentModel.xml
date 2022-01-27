@@ -9,7 +9,9 @@
         <e p="Scripts" t="Include">
           <e p="Character.cs" t="Include" />
           <e p="CharacterController.cs" t="Include" />
+          <e p="Collectable.cs" t="Include" />
           <e p="GameController.cs" t="Include" />
+          <e p="WorldEnum.cs" t="Include" />
         </e>
       </e>
       <e p="GlobalGameJam2022.sln" t="IncludeFlat" />
