@@ -54,4 +54,17 @@ public class CharacterController : MonoBehaviour
         m_Characters[0].transform.position = m_Characters[1].transform.position;
         m_Characters[1].transform.position = temp;
     }
+
+    public int GetCharacterScore(WorldEnum type)
+    {
+        foreach (var character in m_Characters)
+        {
+            if (type == character.world)
+            {
+                return character.collectables;
+            }
+        }
+        
+        return -1;
+    }
 }
