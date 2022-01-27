@@ -204,6 +204,7 @@ MonoBehaviour:
   LevelHud: {fileID: 5223071389991576462}
   CharacterController: {fileID: 7786878866393215304}
   TimeBeforeFadeout: 7
+  IntroText: ': )'
 --- !u!1 &7786878867429407995
 GameObject:
   m_ObjectHideFlags: 0
