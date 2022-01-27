@@ -6,6 +6,11 @@ public class CharacterController : MonoBehaviour
 {
     public List<Character> m_Characters = new List<Character>();
 
+    private void Start()
+    {
+        m_Characters = new List<Character>(GameObject.FindObjectsOfType<Character>());
+    }
+
     void Update()
     {
         // get all inputs for controller first

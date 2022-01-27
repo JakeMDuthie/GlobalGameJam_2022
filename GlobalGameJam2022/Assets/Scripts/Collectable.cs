@@ -27,9 +27,6 @@ public class Collectable : MonoBehaviour
             if (character.world == this.world)
             {
                 SamWorldePick(character);
-            } else
-            {
-                OtherWorldPick(character);
             }
         }
     }
@@ -38,11 +35,6 @@ public class Collectable : MonoBehaviour
     void SamWorldePick(Character character)
     {
         character.getCollectable();
-        Destroy(this.gameObject);
-    }
-
-    void OtherWorldPick(Character character)
-    {
         Destroy(this.gameObject);
     }
 }
