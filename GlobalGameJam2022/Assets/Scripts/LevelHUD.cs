@@ -20,7 +20,8 @@ public class LevelHUD : MonoBehaviour
     {
         if (_characterController != null)
         {
-            OrangeCounter.
+            OrangeCounter.text = $"Orange: {_characterController.GetCharacterScore(WorldEnum.Orange)}";
+            GreenCounter.text = $"Green: {_characterController.GetCharacterScore(WorldEnum.Green)}";
         }
     }
 }

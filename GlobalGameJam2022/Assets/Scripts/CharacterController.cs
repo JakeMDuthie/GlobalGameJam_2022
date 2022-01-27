@@ -50,7 +50,7 @@ public class CharacterController : MonoBehaviour
         m_Characters[1].transform.position = temp;
     }
 
-    private int GetCharacterScore(WorldEnum type)
+    public int GetCharacterScore(WorldEnum type)
     {
         foreach (var character in m_Characters)
         {

@@ -424,6 +424,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fd4d2d233443ab438b54eaccb51f9d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GreenCounter: {fileID: 7412469956050702655}
+  OrangeCounter: {fileID: 5615452820567763999}
 --- !u!1 &6750853022099711736
 GameObject:
   m_ObjectHideFlags: 0
