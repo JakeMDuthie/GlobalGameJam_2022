@@ -9,6 +9,8 @@ public class LevelHUD : MonoBehaviour
     public TextMeshProUGUI GreenCounter;
     public TextMeshProUGUI OrangeCounter;
 
+    public Animator OverlayAnimator;
+
     private CharacterController _characterController;
 
     private void Start()
@@ -22,6 +24,14 @@ public class LevelHUD : MonoBehaviour
         {
             OrangeCounter.text = $"Orange: {_characterController.GetCharacterScore(WorldEnum.Orange)}";
             GreenCounter.text = $"Green: {_characterController.GetCharacterScore(WorldEnum.Green)}";
+        }
+    }
+
+    public void FadeoutIntroText()
+    {
+        if (OverlayAnimator != null)
+        {
+            OverlayAnimator.Play("Fadeout", -1, 0f);
         }
     }
 }

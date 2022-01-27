@@ -13,6 +13,7 @@
           <e p="GameController.cs" t="Include" />
           <e p="LevelController.cs" t="Include" />
           <e p="LevelHUD.cs" t="Include" />
+          <e p="WolfBarrier.cs" t="Include" />
           <e p="WorldEnum.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">

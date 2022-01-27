@@ -201,6 +201,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 108b500dc05f4b74cbea3fdcdc35f91a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LevelHud: {fileID: 5223071389991576462}
+  CharacterController: {fileID: 7786878866393215304}
+  TimeBeforeFadeout: 7
 --- !u!1 &7786878867429407995
 GameObject:
   m_ObjectHideFlags: 0
@@ -1208,3 +1211,15 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 3984538600474452419}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5223071389991576462 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9167076485715493453, guid: 9fe2058d61facba4ab76db7882d01bb2,
+    type: 3}
+  m_PrefabInstance: {fileID: 3984538600474452419}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fd4d2d233443ab438b54eaccb51f9d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

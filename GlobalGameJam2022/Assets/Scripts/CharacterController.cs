@@ -6,6 +6,14 @@ public class CharacterController : MonoBehaviour
 {
     public List<Character> m_Characters = new List<Character>();
 
+    private bool _inputBlocked;
+
+    public bool InputBlocked
+    {
+        get => _inputBlocked;
+        set => _inputBlocked = value;
+    }
+
     private void Start()
     {
         m_Characters = new List<Character>(GameObject.FindObjectsOfType<Character>());
@@ -13,30 +21,33 @@ public class CharacterController : MonoBehaviour
 
     void Update()
     {
-        // get all inputs for controller first
-        float translation = Input.GetAxis("Horizontal");
-        bool tryJump = Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow);
-
-        // apply all inputs to both characters
-        bool warpable = true;
-        foreach (var character in m_Characters)
+        if (!_inputBlocked)
         {
-            character.ApplyMovement(translation);
-            if (tryJump)
+            // get all inputs for controller first
+            float translation = Input.GetAxis("Horizontal");
+            bool tryJump = Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow);
+
+            // apply all inputs to both characters
+            bool warpable = true;
+            foreach (var character in m_Characters)
             {
-                character.TryJump();
+                character.ApplyMovement(translation);
+                if (tryJump)
+                {
+                    character.TryJump();
+                }
+
+                if (!character.Warpable)
+                {
+                    warpable = false;
+                }
             }
 
-            if (!character.Warpable)
+            if (warpable && (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)))
             {
-                warpable = false;
+                Debug.Log("WARPABLE!");
+                SwapCharacters();
             }
-        }
-
-        if (warpable && (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)))
-        {
-            Debug.Log("WARPABLE!");
-            SwapCharacters();
         }
     }
 
