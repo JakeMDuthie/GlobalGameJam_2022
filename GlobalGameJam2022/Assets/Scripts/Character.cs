@@ -11,6 +11,16 @@ public class Character : MonoBehaviour
     
     private Rigidbody2D _rigidbody2D;
     private bool _canJump = false;
+    private bool _warpable = false;
+
+    private const string kWarpTag = "WarpZone";
+
+    public bool Warpable
+    {
+        get => _warpable;
+        set => _warpable = value;
+    }
+
     void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
@@ -38,5 +48,21 @@ public class Character : MonoBehaviour
         JumpForce *= _rigidbody2D.mass;
         
         _rigidbody2D.AddForce(new Vector2(0.0f, JumpForce), ForceMode2D.Impulse);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag.Equals(kWarpTag))
+        {
+            _warpable = true;
+        }
+    }
+    
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.tag.Equals(kWarpTag))
+        {
+            _warpable = false;
+        }
     }
 }

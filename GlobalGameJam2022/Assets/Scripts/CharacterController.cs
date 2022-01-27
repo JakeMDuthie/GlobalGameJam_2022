@@ -13,14 +13,40 @@ public class CharacterController : MonoBehaviour
         bool tryJump = Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow);
 
         // apply all inputs to both characters
+        bool warpable = true;
         foreach (var character in m_Characters)
         {
-            Debug.Log(translation);
             character.ApplyMovement(translation);
             if (tryJump)
             {
                 character.TryJump();
             }
+
+            if (!character.Warpable)
+            {
+                warpable = false;
+            }
         }
+
+        if (warpable && (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)))
+        {
+            Debug.Log("WARPABLE!");
+            SwapCharacters();
+        }
+    }
+
+    private void SwapCharacters()
+    {
+        if (m_Characters == null || m_Characters.Count < 2)
+        {
+            // something has gone wrong
+            Debug.LogWarning("Trying to swap 0 or 1 wolves");
+            return;
+        }
+
+        var temp = m_Characters[0].transform.position;
+
+        m_Characters[0].transform.position = m_Characters[1].transform.position;
+        m_Characters[1].transform.position = temp;
     }
 }
