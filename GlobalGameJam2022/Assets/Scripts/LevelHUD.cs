@@ -8,14 +8,19 @@ public class LevelHUD : MonoBehaviour
 {
     public TextMeshProUGUI GreenCounter;
     public TextMeshProUGUI OrangeCounter;
-
     public Animator OverlayAnimator;
+    public DialogueHUDInfo DialogueHudInfo;
 
     private CharacterController _characterController;
 
     private void Start()
     {
         _characterController = FindObjectOfType<CharacterController>();
+    }
+
+    public void SetupIntroText(string introText)
+    {
+        DialogueHudInfo.PresentText(introText);
     }
 
     private void Update()

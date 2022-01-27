@@ -128,6 +128,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 56188954167592240, guid: e522c6aae0ef5e54fafa54690594e409,
+        type: 3}
+      propertyPath: IntroText
+      value: This is a test\nWelcome to the game!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2438773618330906308, guid: e522c6aae0ef5e54fafa54690594e409,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2438773618330906308, guid: e522c6aae0ef5e54fafa54690594e409,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2438773618330906308, guid: e522c6aae0ef5e54fafa54690594e409,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2438773618330906308, guid: e522c6aae0ef5e54fafa54690594e409,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2438773618330906308, guid: e522c6aae0ef5e54fafa54690594e409,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 48
+      objectReference: {fileID: 0}
+    - target: {fileID: 5012049796430783683, guid: e522c6aae0ef5e54fafa54690594e409,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223071389991576462, guid: e522c6aae0ef5e54fafa54690594e409,
+        type: 3}
+      propertyPath: IntroText
+      value: Testing Introduction\nWolf Wolf Wolf!
+      objectReference: {fileID: 0}
     - target: {fileID: 7786878866336093331, guid: e522c6aae0ef5e54fafa54690594e409,
         type: 3}
       propertyPath: m_LocalPosition.x

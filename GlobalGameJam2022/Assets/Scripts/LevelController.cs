@@ -16,6 +16,7 @@ public class LevelController : MonoBehaviour
     public LevelHUD LevelHud;
     public CharacterController CharacterController;
     public float TimeBeforeFadeout;
+    public string IntroText;
     
     private GameController GameController;
     private float _countdown;
@@ -27,6 +28,7 @@ public class LevelController : MonoBehaviour
         _countdown = TimeBeforeFadeout;
         _state = LevelState.eIntro;
         CharacterController.InputBlocked = true;
+        LevelHud.SetupIntroText(IntroText);
     }
 
     private void Update()
