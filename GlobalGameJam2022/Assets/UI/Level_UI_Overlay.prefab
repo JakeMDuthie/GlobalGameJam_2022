@@ -673,7 +673,6 @@ MonoBehaviour:
   OrangeCounter: {fileID: 5615452820567763999}
   OverlayAnimator: {fileID: 2681460406469785522}
   DialogueHudInfo: {fileID: 8187863774458546348}
-  IntroText: 
 --- !u!1 &6750853022099711736
 GameObject:
   m_ObjectHideFlags: 0
