@@ -8,10 +8,14 @@ public class Character : MonoBehaviour
     public float SpeedModifier = 20.0f;
     public float JumpModifier = 50.0f;
     public float GravityDirection = 1.0f;
+    public WorldEnum world;
     
     private Rigidbody2D _rigidbody2D;
     private bool _canJump = false;
     private bool _warpable = false;
+
+    public int collectables = 0;
+
 
     private const string kWarpTag = "WarpZone";
 
@@ -48,6 +52,11 @@ public class Character : MonoBehaviour
         JumpForce *= _rigidbody2D.mass;
         
         _rigidbody2D.AddForce(new Vector2(0.0f, JumpForce), ForceMode2D.Impulse);
+    }
+
+    public void getCollectable()
+    {
+        this.collectables++;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
