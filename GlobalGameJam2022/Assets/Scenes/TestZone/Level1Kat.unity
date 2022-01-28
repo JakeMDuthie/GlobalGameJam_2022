@@ -986,6 +986,16 @@ PrefabInstance:
       propertyPath: OutroTextImbalanced
       value: 'Which wolf is stronger? It is up to you! '
       objectReference: {fileID: 0}
+    - target: {fileID: 1980932206483518057, guid: e522c6aae0ef5e54fafa54690594e409,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.873
+      objectReference: {fileID: 0}
+    - target: {fileID: 2031172937210942254, guid: e522c6aae0ef5e54fafa54690594e409,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.791
+      objectReference: {fileID: 0}
     - target: {fileID: 2438773618330906308, guid: e522c6aae0ef5e54fafa54690594e409,
         type: 3}
       propertyPath: m_text
