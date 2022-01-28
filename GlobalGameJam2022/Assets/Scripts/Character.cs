@@ -12,10 +12,11 @@ public class Character : MonoBehaviour
     public LayerMask JumpLayerMask;
     public WorldEnum world;
     public GameObject wolfRoot;
+    public AudioSource howlAudio;
+    public AudioSource collectAudio;
     
     private Rigidbody2D _rigidbody2D;
     private Collider2D _collider2D;
-    private AudioSource _audioSource;
     private bool _canJump = false;
     private bool _warpable = false;
     private bool _exitable = false;
@@ -45,7 +46,6 @@ public class Character : MonoBehaviour
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _collider2D = GetComponent<Collider2D>();
         _animator = GetComponent<Animator>();
-        _audioSource = GetComponent<AudioSource>();
         
         _animator.Play("Idle", -1, 0.0f);
     }
@@ -116,9 +116,9 @@ public class Character : MonoBehaviour
 
     public void OnHowl()
     {
-        if (_audioSource)
+        if (howlAudio)
         {
-            _audioSource.Play();
+            howlAudio.Play();
         }
     }
     
@@ -144,6 +144,10 @@ public class Character : MonoBehaviour
     public void getCollectable()
     {
         this.collectables++;
+        if (collectAudio)
+        {
+            collectAudio.Play();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)

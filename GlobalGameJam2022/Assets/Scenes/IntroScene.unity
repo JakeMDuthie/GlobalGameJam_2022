@@ -166,12 +166,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffceedbd063de8144a90981af7d9a02e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelOne: TestSceneCollectables
+  SplashScreen: SplashScreen
   LevelList:
   - Level1Kat
   - Level2Kat
   - Level3Kat
-  EndScene: TestScene
+  EndScene: OutroScene
   MaxImbalance: 5
   DarkAudio: {fileID: 747256610}
   LightAudio: {fileID: 887488422}

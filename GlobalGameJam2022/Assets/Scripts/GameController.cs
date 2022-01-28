@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
-    public string LevelOne = "TestScene";
+    public string SplashScreen = "TestScene";
     
     public List<string> LevelList = new List<string>();
 
@@ -42,7 +42,7 @@ public class GameController : MonoBehaviour
     private float _target;
     private bool _volumeUp;
 
-    private int CurrentBalanceScore()
+    public int CurrentBalanceScore()
     {
         int retval = _overallBalanceScore;
         if (_currentLevelController != null)
@@ -70,7 +70,7 @@ public class GameController : MonoBehaviour
         
         //SceneManager.LoadScene(LevelOne);
         _activeLevelNum = 0;
-        SceneManager.LoadScene(LevelList[_activeLevelNum]);
+        SceneManager.LoadScene(SplashScreen);
     }
 
     void Update()
@@ -133,6 +133,30 @@ public class GameController : MonoBehaviour
     private void ResetScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void StartGame()
+    {
+        _overallBalanceScore = 0;
+        _cachedBalanceScore = 0;
+        _current = 0.5f;
+        _target = 0.5f;
+
+        DarkAudio.volume = 1.0f - _current;
+        LightAudio.volume = _current;
+        _activeLevelNum = 0;
+        SceneManager.LoadScene(LevelList[_activeLevelNum]);
+    }
+
+    public void ResetToSplashScreen()
+    {
+        _overallBalanceScore = 0;
+        _cachedBalanceScore = 0;
+        _current = 0.5f;
+        _target = 0.5f;
+        
+        _activeLevelNum = 0;
+        SceneManager.LoadScene(SplashScreen);
     }
 
     public bool TryAdvanceScene()

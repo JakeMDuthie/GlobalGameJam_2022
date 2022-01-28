@@ -20,7 +20,8 @@ public class DialogueHUDInfo : MonoBehaviour
 
     private void Start()
     {
-        Shown(false);
+        //_characterText.enabled = false;
+        //Shown(false);
     }
 
     public void Shown(bool show)
@@ -30,6 +31,7 @@ public class DialogueHUDInfo : MonoBehaviour
 
     public void PresentText(string entry)
     {
+        _characterText.enabled = true;
         if (_characterText == null || entry == null)
         {
             return;
