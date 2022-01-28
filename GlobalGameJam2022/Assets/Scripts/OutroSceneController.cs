@@ -10,6 +10,10 @@ public class OutroSceneController : MonoBehaviour
     public int BalanceTolerance = 3;
     public DialogueHUDInfo DialogueHudInfo;
 
+    public Animator LightAnimator;
+    public Animator DarkAnimator;
+    public Animator MergeAnimator;
+
     private GameController _gameController;
     
     public float WaitTime = 10.0f;
@@ -31,16 +35,30 @@ public class OutroSceneController : MonoBehaviour
             {
                 // LIGHT BALANCE
                 outroTextToShow = LightBalanceText;
+                
+                LightAnimator.gameObject.SetActive(true);
+                LightAnimator.SetBool("Grounded", true);
+                DarkAnimator.gameObject.SetActive(false);
+                MergeAnimator.gameObject.SetActive(false);
             }
             else if (balance < -BalanceTolerance)
             {
                 // DARK BALANCE
                 outroTextToShow = DarkBalanceText;
+                
+                LightAnimator.gameObject.SetActive(false);
+                DarkAnimator.gameObject.SetActive(true);
+                DarkAnimator.SetBool("Grounded", true);
+                MergeAnimator.gameObject.SetActive(false);
             }
             else
             {
                 // BALANCED!
                 outroTextToShow = HarmonyText;
+                
+                LightAnimator.gameObject.SetActive(false);
+                DarkAnimator.gameObject.SetActive(false);
+                MergeAnimator.gameObject.SetActive(true);
             }
         }
 
