@@ -478,7 +478,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea094a674e51a814281dfd54096f2ebf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HarmonyText: The HARMONY is restored.
+  HarmonyText: The HARMONY is restored!
   DarkBalanceText: This blue wolf is stronger. It takes over the world.
   LightBalanceText: This yellow wolf is stronger. It takes over the world.
   BalanceTolerance: 3
