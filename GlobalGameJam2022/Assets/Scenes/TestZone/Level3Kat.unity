@@ -756,7 +756,7 @@ PrefabInstance:
     - target: {fileID: 56188954167592240, guid: e522c6aae0ef5e54fafa54690594e409,
         type: 3}
       propertyPath: OutroTextBalanced
-      value: Is the HARMONY restored?
+      value: Is the HARMONY restored...
       objectReference: {fileID: 0}
     - target: {fileID: 56188954167592240, guid: e522c6aae0ef5e54fafa54690594e409,
         type: 3}
@@ -766,7 +766,7 @@ PrefabInstance:
     - target: {fileID: 56188954167592240, guid: e522c6aae0ef5e54fafa54690594e409,
         type: 3}
       propertyPath: OutroTextImbalanced
-      value: Have you restored the HARMONY?
+      value: Have you restored the HARMONY...
       objectReference: {fileID: 0}
     - target: {fileID: 1980932206483518057, guid: e522c6aae0ef5e54fafa54690594e409,
         type: 3}

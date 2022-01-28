@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpeedModifier: 8
-  JumpModifier: 5
+  JumpModifier: 6
   GravityDirection: 1
   JumpCooldownMax: 0.1
   JumpLayerMask:

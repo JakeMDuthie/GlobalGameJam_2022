@@ -974,7 +974,7 @@ PrefabInstance:
     - target: {fileID: 56188954167592240, guid: e522c6aae0ef5e54fafa54690594e409,
         type: 3}
       propertyPath: OutroTextBalanced
-      value: 'Which wolf is stronger? It is up to you! '
+      value: 'Which wolf is stronger... It is up to you! '
       objectReference: {fileID: 0}
     - target: {fileID: 56188954167592240, guid: e522c6aae0ef5e54fafa54690594e409,
         type: 3}
@@ -984,7 +984,7 @@ PrefabInstance:
     - target: {fileID: 56188954167592240, guid: e522c6aae0ef5e54fafa54690594e409,
         type: 3}
       propertyPath: OutroTextImbalanced
-      value: 'Which wolf is stronger? It is up to you! '
+      value: 'Which wolf is stronger... It is up to you! '
       objectReference: {fileID: 0}
     - target: {fileID: 1980932206483518057, guid: e522c6aae0ef5e54fafa54690594e409,
         type: 3}
