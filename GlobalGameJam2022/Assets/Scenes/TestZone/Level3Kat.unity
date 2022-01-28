@@ -410,6 +410,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: warpZone (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8594781695781224925, guid: 1e5f08a793cc25248977871f3d25c700,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.99999994
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e5f08a793cc25248977871f3d25c700, type: 3}
 --- !u!1 &235927571
@@ -762,6 +767,16 @@ PrefabInstance:
         type: 3}
       propertyPath: OutroTextImbalanced
       value: Have you restored the HARMONY?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1980932206483518057, guid: e522c6aae0ef5e54fafa54690594e409,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 2031172937210942254, guid: e522c6aae0ef5e54fafa54690594e409,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.83
       objectReference: {fileID: 0}
     - target: {fileID: 2438773618330906308, guid: e522c6aae0ef5e54fafa54690594e409,
         type: 3}
@@ -2198,6 +2213,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: warpZone (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8073632745313345690, guid: 1e5f08a793cc25248977871f3d25c700,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e5f08a793cc25248977871f3d25c700, type: 3}
