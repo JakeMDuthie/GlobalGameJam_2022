@@ -10,13 +10,17 @@ public class LevelController : MonoBehaviour
     {
         eIntro,
         ePlay,
-        eOutro
+        eOutro,
+        eEnd
     }
     
     public LevelHUD LevelHud;
     public CharacterController CharacterController;
     public float TimeBeforeFadeout;
-    public string IntroText;
+    public string IntroText = "<placeholder>";
+    
+    public string OutroTextImbalanced = "Fin";
+    public string OutroTextBalanced = "Fin";
     
     private GameController GameController;
     private float _countdown;
@@ -29,6 +33,7 @@ public class LevelController : MonoBehaviour
         _state = LevelState.eIntro;
         CharacterController.InputBlocked = true;
         LevelHud.SetupIntroText(IntroText);
+        CharacterController.Setup(GameController, this);
     }
 
     private void Update()
@@ -44,5 +49,23 @@ public class LevelController : MonoBehaviour
             CharacterController.InputBlocked = false;
             LevelHud.FadeoutIntroText();
         }
+
+        if (_countdown <= 0.0f && _state == LevelState.eOutro)
+        {
+            _state = LevelState.eEnd;
+
+            if (GameController != null)
+            {
+                GameController.TryAdvanceScene();
+            }
+        }
+    }
+
+    public void BeginFadeOut()
+    {
+        _state = LevelState.eOutro;
+        _countdown = 10.0f;
+        LevelHud.FadeinOutroText();
+        LevelHud.SetupOutroText(OutroTextBalanced);
     }
 }
