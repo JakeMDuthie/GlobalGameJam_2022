@@ -65,6 +65,11 @@ public abstract class ProximitySkill : MonoBehaviour
         {
             skillPerformed = true;
             PerformSkill();
+
+            if (character)
+            {
+                character.TryHowl();
+            }
         }
     }
 

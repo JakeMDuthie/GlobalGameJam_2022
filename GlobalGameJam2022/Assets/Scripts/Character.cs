@@ -15,6 +15,7 @@ public class Character : MonoBehaviour
     
     private Rigidbody2D _rigidbody2D;
     private Collider2D _collider2D;
+    private AudioSource _audioSource;
     private bool _canJump = false;
     private bool _warpable = false;
     private bool _exitable = false;
@@ -44,6 +45,7 @@ public class Character : MonoBehaviour
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _collider2D = GetComponent<Collider2D>();
         _animator = GetComponent<Animator>();
+        _audioSource = GetComponent<AudioSource>();
         
         _animator.Play("Idle", -1, 0.0f);
     }
@@ -105,6 +107,19 @@ public class Character : MonoBehaviour
         _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.y, JumpForce);
         
         _animator.SetTrigger("Jump");
+    }
+
+    public void TryHowl()
+    {
+        _animator.SetTrigger("Howl");
+    }
+
+    public void OnHowl()
+    {
+        if (_audioSource)
+        {
+            _audioSource.Play();
+        }
     }
     
     private bool IsGrounded()
