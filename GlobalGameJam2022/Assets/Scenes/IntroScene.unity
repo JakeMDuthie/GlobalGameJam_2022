@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffceedbd063de8144a90981af7d9a02e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelOne: TestSceneCollectables
+  SplashScreen: SplashScreen
   LevelList:
   - Level1Kat
   - Level2Kat
