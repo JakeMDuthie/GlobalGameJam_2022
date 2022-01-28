@@ -559,6 +559,86 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 56188954167592240, guid: e522c6aae0ef5e54fafa54690594e409,
+        type: 3}
+      propertyPath: IntroText
+      value: 'Try out the power of the wolf.  Press space to use it. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 56188954167592240, guid: e522c6aae0ef5e54fafa54690594e409,
+        type: 3}
+      propertyPath: OutroTextBalanced
+      value: 'Which wolf is stronger now? '
+      objectReference: {fileID: 0}
+    - target: {fileID: 56188954167592240, guid: e522c6aae0ef5e54fafa54690594e409,
+        type: 3}
+      propertyPath: TimeBeforeFadeout
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 56188954167592240, guid: e522c6aae0ef5e54fafa54690594e409,
+        type: 3}
+      propertyPath: OutroTextImbalanced
+      value: 'Which wolf is stronger now? '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2438773618330906308, guid: e522c6aae0ef5e54fafa54690594e409,
+        type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2438773618330906308, guid: e522c6aae0ef5e54fafa54690594e409,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2438773618330906308, guid: e522c6aae0ef5e54fafa54690594e409,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2438773618330906308, guid: e522c6aae0ef5e54fafa54690594e409,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2438773618330906308, guid: e522c6aae0ef5e54fafa54690594e409,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 2438773618330906308, guid: e522c6aae0ef5e54fafa54690594e409,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 3365382060504013580, guid: e522c6aae0ef5e54fafa54690594e409,
+        type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3365382060504013580, guid: e522c6aae0ef5e54fafa54690594e409,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3365382060504013580, guid: e522c6aae0ef5e54fafa54690594e409,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3365382060504013580, guid: e522c6aae0ef5e54fafa54690594e409,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3365382060504013580, guid: e522c6aae0ef5e54fafa54690594e409,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3365382060504013580, guid: e522c6aae0ef5e54fafa54690594e409,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 28
+      objectReference: {fileID: 0}
     - target: {fileID: 5878761680371249404, guid: e522c6aae0ef5e54fafa54690594e409,
         type: 3}
       propertyPath: m_textInfo.lineCount

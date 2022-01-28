@@ -839,6 +839,86 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 56188954167592240, guid: e522c6aae0ef5e54fafa54690594e409,
+        type: 3}
+      propertyPath: IntroText
+      value: 'The time has come to put the wolves to the test. Show them the way. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 56188954167592240, guid: e522c6aae0ef5e54fafa54690594e409,
+        type: 3}
+      propertyPath: OutroTextBalanced
+      value: Is the HARMONY restored?
+      objectReference: {fileID: 0}
+    - target: {fileID: 56188954167592240, guid: e522c6aae0ef5e54fafa54690594e409,
+        type: 3}
+      propertyPath: TimeBeforeFadeout
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 56188954167592240, guid: e522c6aae0ef5e54fafa54690594e409,
+        type: 3}
+      propertyPath: OutroTextImbalanced
+      value: Have you restored the HARMONY?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2438773618330906308, guid: e522c6aae0ef5e54fafa54690594e409,
+        type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2438773618330906308, guid: e522c6aae0ef5e54fafa54690594e409,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2438773618330906308, guid: e522c6aae0ef5e54fafa54690594e409,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2438773618330906308, guid: e522c6aae0ef5e54fafa54690594e409,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 2438773618330906308, guid: e522c6aae0ef5e54fafa54690594e409,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 2438773618330906308, guid: e522c6aae0ef5e54fafa54690594e409,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 79
+      objectReference: {fileID: 0}
+    - target: {fileID: 3365382060504013580, guid: e522c6aae0ef5e54fafa54690594e409,
+        type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3365382060504013580, guid: e522c6aae0ef5e54fafa54690594e409,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3365382060504013580, guid: e522c6aae0ef5e54fafa54690594e409,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3365382060504013580, guid: e522c6aae0ef5e54fafa54690594e409,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3365382060504013580, guid: e522c6aae0ef5e54fafa54690594e409,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3365382060504013580, guid: e522c6aae0ef5e54fafa54690594e409,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 5878761680371249404, guid: e522c6aae0ef5e54fafa54690594e409,
         type: 3}
       propertyPath: m_textInfo.lineCount
