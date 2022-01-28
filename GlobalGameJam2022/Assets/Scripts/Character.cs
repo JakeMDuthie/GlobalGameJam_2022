@@ -11,6 +11,7 @@ public class Character : MonoBehaviour
     public float JumpCooldownMax = 0.1f;
     public LayerMask JumpLayerMask;
     public WorldEnum world;
+    public GameObject wolfRoot;
     
     private Rigidbody2D _rigidbody2D;
     private Collider2D _collider2D;
@@ -18,6 +19,10 @@ public class Character : MonoBehaviour
     private bool _warpable = false;
     private bool _exitable = false;
     private float _jumpCooldown = 0.0f;
+    private Animator _animator;
+
+    private float _lastHorizontalSpeed = 0.0f;
+    private bool _facingRight = true;
 
     public int collectables = 0;
 
@@ -38,6 +43,9 @@ public class Character : MonoBehaviour
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _collider2D = GetComponent<Collider2D>();
+        _animator = GetComponent<Animator>();
+        
+        _animator.Play("Idle", -1, 0.0f);
     }
     
     void Update()
@@ -60,6 +68,17 @@ public class Character : MonoBehaviour
 
     public void ApplyMovement(float force)
     {
+        if (force < 0.0f && _facingRight)
+        {
+            _facingRight = false;
+            wolfRoot.transform.Rotate(0.0f,180.0f,0.0f); 
+        }
+        else if (force > 0.0f && !_facingRight)
+        {
+            _facingRight = true;
+            wolfRoot.transform.Rotate(0.0f,180.0f,0.0f); 
+        }
+        
         _rigidbody2D.velocity = new Vector2(force*SpeedModifier, _rigidbody2D.velocity.y);
     }
 
