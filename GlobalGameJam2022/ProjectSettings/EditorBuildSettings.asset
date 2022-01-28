@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SplashScreen.unity
     guid: 22bb7f9e8a6a2334aa09b3fc0f9c3918
+  - enabled: 1
+    path: Assets/Scenes/OutroScene.unity
+    guid: e0085b30d4842124295f3f2a86655353
   m_configObjects: {}

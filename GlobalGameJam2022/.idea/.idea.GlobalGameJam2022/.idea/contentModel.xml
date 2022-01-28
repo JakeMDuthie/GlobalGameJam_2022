@@ -17,6 +17,7 @@
           <e p="GameController.cs" t="Include" />
           <e p="LevelController.cs" t="Include" />
           <e p="LevelHUD.cs" t="Include" />
+          <e p="OutroSceneController.cs" t="Include" />
           <e p="Skills" t="Include">
             <e p="CreateBlock.cs" t="Include" />
             <e p="ProximitySkill.cs" t="Include" />

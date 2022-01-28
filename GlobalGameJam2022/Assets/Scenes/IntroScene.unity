@@ -171,7 +171,7 @@ MonoBehaviour:
   - Level1Kat
   - Level2Kat
   - Level3Kat
-  EndScene: TestScene
+  EndScene: OutroScene
   MaxImbalance: 5
   DarkAudio: {fileID: 747256610}
   LightAudio: {fileID: 887488422}

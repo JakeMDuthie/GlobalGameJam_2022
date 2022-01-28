@@ -35,6 +35,8 @@ public class DialogueHUDInfo : MonoBehaviour
             return;
         }
         
+        Shown(true);
+        
         _textToWrite = entry;
         _characterIndex = 0;
         _timer = 0.0f;
