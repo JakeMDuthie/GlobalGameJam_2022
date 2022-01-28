@@ -8,6 +8,7 @@ public class CreateBlock : ProximitySkill
     public Material preSkillMaterial;
     public Material canActivateMaterial;
     public Material postSkillMaterial;
+    private Animator animator;
     // Start is called before the first frame update
     public override void OnStart()
     {
@@ -16,6 +17,10 @@ public class CreateBlock : ProximitySkill
         topObject.GetComponent<BoxCollider2D>().enabled = false;
         OnCanActivateOut();
         GetComponent<Renderer>().enabled = false;
+
+        var animationObject = this.transform.Find("animation");
+        animator = animationObject.GetComponent<Animator>();
+
     }
 
     public override void OnCanActivateIn()
@@ -38,6 +43,7 @@ public class CreateBlock : ProximitySkill
 
     public void GrowSeed()
     {
+        animator.Play("GrowBlock_Growing");
         topObject.GetComponent<Transform>().localPosition = new Vector3(
             0,
             0.427f,
