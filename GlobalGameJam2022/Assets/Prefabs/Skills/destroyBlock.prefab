@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 5961487396027993381}
   - component: {fileID: 5961487396027993380}
   - component: {fileID: 5961487396027993379}
-  - component: {fileID: 5961487396027993376}
   m_Layer: 8
   m_Name: destroyBlock
   m_TagString: Untagged
@@ -123,15 +122,3 @@ MonoBehaviour:
   canCativate: 0
   normalMaterial: {fileID: 2100000, guid: 730de62252f254a278fc2e46edacaa4d, type: 2}
   canActivateMaterial: {fileID: 2100000, guid: b98017f0c109c0a46a47b246bc7f1f39, type: 2}
---- !u!114 &5961487396027993376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5961487396027993382}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43d68cc87b85545f6bb0305de2fb9809, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
