@@ -10,6 +10,7 @@ public class LevelHUD : MonoBehaviour
     public TextMeshProUGUI OrangeCounter;
     public Animator OverlayAnimator;
     public DialogueHUDInfo DialogueHudInfo;
+    public DialogueHUDInfo DialogueHudInfoOutro;
 
     private CharacterController _characterController;
 
@@ -20,7 +21,16 @@ public class LevelHUD : MonoBehaviour
 
     public void SetupIntroText(string introText)
     {
+        DialogueHudInfo.gameObject.SetActive(true);
+        DialogueHudInfoOutro.gameObject.SetActive(false);
         DialogueHudInfo.PresentText(introText);
+    }
+
+    public void SetupOutroText(string outroText)
+    {
+        DialogueHudInfo.gameObject.SetActive(false);
+        DialogueHudInfoOutro.gameObject.SetActive(true);
+        DialogueHudInfoOutro.PresentText(outroText);
     }
 
     private void Update()
@@ -37,6 +47,14 @@ public class LevelHUD : MonoBehaviour
         if (OverlayAnimator != null)
         {
             OverlayAnimator.Play("Fadeout", -1, 0f);
+        }
+    }
+
+    public void FadeinOutroText()
+    {
+        if (OverlayAnimator != null)
+        {
+            OverlayAnimator.Play("Fadein", -1, 0f);
         }
     }
 }

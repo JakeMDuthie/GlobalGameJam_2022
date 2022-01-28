@@ -6,12 +6,20 @@ public class CharacterController : MonoBehaviour
 {
     public List<Character> m_Characters = new List<Character>();
 
+    private GameController _gameController;
+    private LevelController _levelController;
     private bool _inputBlocked;
 
     public bool InputBlocked
     {
         get => _inputBlocked;
         set => _inputBlocked = value;
+    }
+
+    public void Setup(GameController gameController, LevelController levelController)
+    {
+        _gameController = gameController;
+        _levelController = levelController;
     }
 
     private void Start()
@@ -29,6 +37,7 @@ public class CharacterController : MonoBehaviour
 
             // apply all inputs to both characters
             bool warpable = true;
+            bool exitable = true;
             foreach (var character in m_Characters)
             {
                 character.ApplyMovement(translation);
@@ -41,14 +50,37 @@ public class CharacterController : MonoBehaviour
                 {
                     warpable = false;
                 }
+
+                if (!character.Exitable)
+                {
+                    exitable = false;
+                }
             }
 
-            if (warpable && (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)))
+            if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
             {
-                Debug.Log("WARPABLE!");
-                SwapCharacters();
+                if (exitable)
+                {
+                    Debug.Log("EXITABLE!");
+                    ExitLevel();
+                }
+                else if (warpable)
+                {
+                    Debug.Log("WARPABLE!");
+                    SwapCharacters();
+                }
             }
         }
+    }
+
+    private void ExitLevel()
+    {
+        if (_levelController == null)
+        {
+            return;
+        }
+        
+        _levelController.BeginFadeOut();
     }
 
     private void SwapCharacters()

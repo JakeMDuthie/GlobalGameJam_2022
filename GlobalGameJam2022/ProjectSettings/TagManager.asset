@@ -6,6 +6,7 @@ TagManager:
   tags:
   - WarpZone
   - TutorialTrigger
+  - EndZone
   layers:
   - Default
   - TransparentFX

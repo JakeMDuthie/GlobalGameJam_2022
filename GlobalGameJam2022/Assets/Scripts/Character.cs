@@ -16,17 +16,22 @@ public class Character : MonoBehaviour
     private Collider2D _collider2D;
     private bool _canJump = false;
     private bool _warpable = false;
+    private bool _exitable = false;
     private float _jumpCooldown = 0.0f;
 
     public int collectables = 0;
 
-
     private const string kWarpTag = "WarpZone";
+    private const string kEndTag = "EndZone";
 
     public bool Warpable
     {
         get => _warpable;
-        set => _warpable = value;
+    }
+
+    public bool Exitable
+    {
+        get => _exitable;
     }
 
     void Start()
@@ -106,6 +111,10 @@ public class Character : MonoBehaviour
         {
             _warpable = true;
         }
+        else if (other.tag.Equals(kEndTag))
+        {
+            _exitable = true;
+        }
     }
     
     private void OnTriggerExit2D(Collider2D other)
@@ -113,6 +122,10 @@ public class Character : MonoBehaviour
         if (other.tag.Equals(kWarpTag))
         {
             _warpable = false;
+        }
+        else if (other.tag.Equals(kEndTag))
+        {
+            _exitable = false;
         }
     }
 }
