@@ -166,7 +166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelOne: TestSceneCollectables
   LevelList:
-  - TestScene
   - Level1Kat
   - Level2Kat
+  - Level3Kat
   EndScene: TestScene
