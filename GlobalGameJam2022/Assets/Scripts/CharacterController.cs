@@ -10,6 +10,8 @@ public class CharacterController : MonoBehaviour
     private LevelController _levelController;
     private bool _inputBlocked;
 
+    private bool _ending;
+
     public bool InputBlocked
     {
         get => _inputBlocked;
@@ -25,6 +27,7 @@ public class CharacterController : MonoBehaviour
     private void Start()
     {
         m_Characters = new List<Character>(GameObject.FindObjectsOfType<Character>());
+        _ending = false;
     }
 
     void Update()
@@ -75,12 +78,15 @@ public class CharacterController : MonoBehaviour
 
     private void ExitLevel()
     {
-        if (_levelController == null)
+        if (_levelController != null)
         {
-            return;
+            _levelController.BeginFadeOut();
         }
-        
-        _levelController.BeginFadeOut();
+
+        if (_gameController != null)
+        {
+            _gameController.CacheBalanceScore(GetBalanceScore());
+        }
     }
 
     private void SwapCharacters()
@@ -109,5 +115,15 @@ public class CharacterController : MonoBehaviour
         }
         
         return -1;
+    }
+
+    public int GetBalanceScore()
+    {
+        if (_ending)
+        {
+            return 0;
+        }
+        
+        return GetCharacterScore(WorldEnum.Orange) - GetCharacterScore(WorldEnum.Green);
     }
 }

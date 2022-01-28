@@ -12,7 +12,46 @@ public class GameController : MonoBehaviour
 
     public string EndScene;
 
+    [Header("Music Controls")] 
+    public int MaxImbalance;
+
+    public AudioSource DarkAudio;
+    public AudioSource LightAudio;
+
+    public float VolumeSpeed;
+
     private int _activeLevelNum = 0;
+
+    private LevelController _currentLevelController;
+
+    public LevelController CurrentLevelController
+    {
+        get => _currentLevelController;
+        set => _currentLevelController = value;
+    }
+
+    // balance 0 = perfectly balanced.
+    // -ve = dark balanced.
+    // +ve = light balanced
+    private int _overallBalanceScore = 0;
+    
+    private int _cachedBalanceScore = -1;
+    
+    // audio variables
+    private float _current;
+    private float _target;
+    private bool _volumeUp;
+
+    private int CurrentBalanceScore()
+    {
+        int retval = _overallBalanceScore;
+        if (_currentLevelController != null)
+        {
+            retval += _currentLevelController.GetLevelBalanceScore();
+        }
+
+        return retval;
+    }
     
     private void Awake()
     {
@@ -21,6 +60,14 @@ public class GameController : MonoBehaviour
 
     private void Start()
     {
+        _overallBalanceScore = 0;
+        _cachedBalanceScore = 0;
+        _current = 0.5f;
+        _target = 0.5f;
+
+        DarkAudio.volume = 1.0f - _current;
+        LightAudio.volume = _current;
+        
         //SceneManager.LoadScene(LevelOne);
         _activeLevelNum = 0;
         SceneManager.LoadScene(LevelList[_activeLevelNum]);
@@ -32,6 +79,55 @@ public class GameController : MonoBehaviour
         {
             ResetScene();
         }
+
+        var currBalanceScore = CurrentBalanceScore();
+        if (currBalanceScore != _cachedBalanceScore)
+        {
+            _volumeUp = currBalanceScore > _cachedBalanceScore;
+            _cachedBalanceScore = currBalanceScore;
+
+            UpdateMusicBalance();
+        }
+        
+        AudioEasing();
+    }
+
+    private void AudioEasing()
+    {
+        if (Mathf.Approximately(_current,_target))
+        {
+            return;
+        }
+        
+        _current += VolumeSpeed * Time.deltaTime * ((_volumeUp) ? 1.0f : -1.0f);
+
+        if (_volumeUp)
+        {
+            if (_current > _target)
+            {
+                _current = _target;
+            }
+        }
+        else
+        {
+            if (_current < _target)
+            {
+                _current = _target;
+            }
+        }
+        
+        DarkAudio.volume = 1.0f - _current;
+        LightAudio.volume = _current;
+    }
+
+    void UpdateMusicBalance()
+    {
+        // clamp imbalance between maximums
+        var value = Mathf.Clamp(_cachedBalanceScore,-MaxImbalance,MaxImbalance);
+
+        var normValue = Mathf.InverseLerp(-MaxImbalance, MaxImbalance, value);
+
+        _target = normValue;
     }
 
     private void ResetScene()
@@ -52,5 +148,10 @@ public class GameController : MonoBehaviour
 
         SceneManager.LoadScene(LevelList[_activeLevelNum]);
         return true;
+    }
+
+    public void CacheBalanceScore(int delta)
+    {
+        _overallBalanceScore += delta;
     }
 }
