@@ -32,7 +32,7 @@ public abstract class ProximitySkill : MonoBehaviour
 
     private void CheckProximity()
     {
-        if (character)
+        if (character && !skillPerformed)
         {
             var size = GetComponent<Collider2D>().bounds.size;
             Vector3 source = transform.position;

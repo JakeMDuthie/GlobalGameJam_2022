@@ -25,6 +25,7 @@ public class CreateBlock : ProximitySkill
 
     public override void OnCanActivateIn()
     {
+        animator.Play("GrowBlock_CanActivate");
         topObject.GetComponent<Renderer>().material = canActivateMaterial;
     }
 
@@ -46,7 +47,7 @@ public class CreateBlock : ProximitySkill
         animator.Play("GrowBlock_Growing");
         topObject.GetComponent<Transform>().localPosition = new Vector3(
             0,
-            0.427f,
+            0.41f,
             0
         );
     }
