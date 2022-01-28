@@ -34,6 +34,16 @@ public class LevelController : MonoBehaviour
         CharacterController.InputBlocked = true;
         LevelHud.SetupIntroText(IntroText);
         CharacterController.Setup(GameController, this);
+
+        if (GameController != null)
+        {
+            GameController.CurrentLevelController = this;
+        }
+    }
+
+    public int GetLevelBalanceScore()
+    {
+        return CharacterController.GetBalanceScore();
     }
 
     private void Update()
