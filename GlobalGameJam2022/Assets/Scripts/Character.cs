@@ -57,12 +57,17 @@ public class Character : MonoBehaviour
             _jumpCooldown -= Time.deltaTime;
         }
 
-        if (_jumpCooldown <= 0.0f && !_canJump)
+        if (IsGrounded())
         {
-            if (IsGrounded())
+            _animator.SetBool("Grounded", true);
+            if (_jumpCooldown <= 0.0f && !_canJump)
             {
                 _canJump = true;
             }
+        }
+        else
+        {
+            _animator.SetBool("Grounded", false);
         }
     }
 
@@ -79,6 +84,8 @@ public class Character : MonoBehaviour
             wolfRoot.transform.Rotate(0.0f,180.0f,0.0f); 
         }
         
+        _animator.SetBool("Running", !Mathf.Approximately(force,0.0f));
+        
         _rigidbody2D.velocity = new Vector2(force*SpeedModifier, _rigidbody2D.velocity.y);
     }
 
@@ -94,10 +101,10 @@ public class Character : MonoBehaviour
         _jumpCooldown = JumpCooldownMax;
 
         var JumpForce = (GravityDirection < 0.0f)? (-JumpModifier): JumpModifier;
-
-        JumpForce *= _rigidbody2D.mass;
         
-        _rigidbody2D.AddForce(new Vector2(0.0f, JumpForce), ForceMode2D.Impulse);
+        _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.y, JumpForce);
+        
+        _animator.SetTrigger("Jump");
     }
     
     private bool IsGrounded()
