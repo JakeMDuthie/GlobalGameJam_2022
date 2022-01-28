@@ -436,7 +436,7 @@ PrefabInstance:
     - target: {fileID: 1214779242633680089, guid: bd91fc077dbbb7441836247977cce346,
         type: 3}
       propertyPath: m_text
-      value: 'Exit: S or Down'
+      value: Exit! S or Down
       objectReference: {fileID: 0}
     - target: {fileID: 1214779242633680089, guid: bd91fc077dbbb7441836247977cce346,
         type: 3}
@@ -611,7 +611,7 @@ PrefabInstance:
     - target: {fileID: 1214779242633680089, guid: bd91fc077dbbb7441836247977cce346,
         type: 3}
       propertyPath: m_text
-      value: 'Exit: S or Down'
+      value: Exit! S or Down
       objectReference: {fileID: 0}
     - target: {fileID: 1214779242633680089, guid: bd91fc077dbbb7441836247977cce346,
         type: 3}

@@ -276,12 +276,12 @@ PrefabInstance:
     - target: {fileID: 1214779242633680089, guid: bd91fc077dbbb7441836247977cce346,
         type: 3}
       propertyPath: m_text
-      value: 'Warp: S or Down'
+      value: Warp! S or Down
       objectReference: {fileID: 0}
     - target: {fileID: 1214779242633680089, guid: bd91fc077dbbb7441836247977cce346,
         type: 3}
       propertyPath: m_fontSize
-      value: 11.8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1214779242633680089, guid: bd91fc077dbbb7441836247977cce346,
         type: 3}
@@ -421,12 +421,12 @@ PrefabInstance:
     - target: {fileID: 1214779242633680089, guid: bd91fc077dbbb7441836247977cce346,
         type: 3}
       propertyPath: m_text
-      value: 'Warp: S or Down'
+      value: Warp! S or Down
       objectReference: {fileID: 0}
     - target: {fileID: 1214779242633680089, guid: bd91fc077dbbb7441836247977cce346,
         type: 3}
       propertyPath: m_fontSize
-      value: 11.8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1214779242633680089, guid: bd91fc077dbbb7441836247977cce346,
         type: 3}
