@@ -21,7 +21,7 @@ public class OutroSceneController : MonoBehaviour
         _gameController = FindObjectOfType<GameController>();
         _countdown = WaitTime;
 
-        var outroTextToShow = string.Empty;
+        var outroTextToShow = HarmonyText;
 
         if (_gameController)
         {
